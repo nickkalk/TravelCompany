@@ -21,7 +21,6 @@ public class ItineraryRepositoryImpl implements ItineraryRepository {
      */
     @Override
     public boolean createItinerary(Itinerary itinerary) {
-        // TO DO *****
         itineraries.add(itinerary);
         return false;
     }
