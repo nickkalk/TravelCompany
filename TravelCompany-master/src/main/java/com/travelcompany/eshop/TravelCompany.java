@@ -66,6 +66,5 @@ public class TravelCompany {
         }
         System.out.println("The total number of tickets is " + ticketsNumber + " and the cost is " + totalAmount + "\n");
         System.out.println("The total number of offered itineraries is " + itineraryService.returnItinerary().size());
-
     }
 }
