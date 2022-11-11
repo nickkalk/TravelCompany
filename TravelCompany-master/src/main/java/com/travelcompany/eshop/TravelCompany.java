@@ -65,6 +65,18 @@ public class TravelCompany {
             totalAmount += ticket.getPaymentAmount();
         }
         System.out.println("The total number of tickets is " + ticketsNumber + " and the cost is " + totalAmount + "\n");
-        System.out.println("The total number of offered itineraries is " + itineraryService.returnItinerary().size());
+        System.out.println("The total number of offered itineraries is " + itineraryService.returnItinerary().size() + "\n");
+        for (Customer customer : customerService.returnCustomer()) {
+            boolean hasOrdered = false;
+            for (Ticket ticket : ticketService.returnTicket()) {
+
+                if (customer.getId() == ticket.getPassengerId()) {
+                    hasOrdered = true;
+                }
+            }
+            if (!hasOrdered) {
+                System.out.println(" Customers with no tickets " + customer.toString());
+            }
+        }
     }
 }
